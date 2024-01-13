@@ -1,0 +1,27 @@
+# ORCA 5.0.4 input for wB97M-D4/def2-TZVPP single-point (w/ trailing white-space)
+
+# Functional, basis set, and dispersion correction
+! wB97M-D4 def2-TZVPP
+# Dispersion correction
+# Speed-up approximations
+! RIJCOSX def2/J
+# Accuracy settings
+! TightSCF defgrid2
+# Job type
+! SP EnGrad
+# Print level
+! Smallprint
+
+# Number of processors
+%pal nprocs 12 end
+# RAM per processor
+%maxcore 4096
+
+# Enable quadrupole calculation, dipole is enabled by default
+%elprop
+Quadrupole True
+end
+
+# Charge, multiplicity and xyz file
+*xyzfile 0 1 calc.xyz 
+
